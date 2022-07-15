@@ -2,10 +2,10 @@ package pl.cyber.trainees.dziedziczenie;
 
 public class Model extends Pojazd {
 
-    private final String nazwa;
-    private final Integer przebieg;
-    private final Double pojemnoscSilnika;
-    private final Kolor kolor;
+    private String nazwa;
+    private Integer przebieg;
+    private Double pojemnoscSilnika;
+    private Kolor kolor;
 
     public Model(){
         super();
@@ -51,5 +51,21 @@ public class Model extends Pojazd {
 
     public String getNazwa() {
         return nazwa;
+    }
+
+    public void setNazwa(String nazwa) {
+        this.nazwa = nazwa;
+    }
+
+    public void setPojemnoscSilnika(Double pojemnoscSilnika) {
+        this.pojemnoscSilnika = pojemnoscSilnika;
+    }
+
+    public void setPrzebieg(Integer przebieg) {
+        this.przebieg = przebieg;
+    }
+
+    public void setKolor(Kolor kolor) {
+        this.kolor = kolor;
     }
 }
