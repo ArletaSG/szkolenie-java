@@ -2,6 +2,7 @@ package pl.cyber.trainees;
 
 import pl.cyber.trainees.dziedziczenie.Kolor;
 import pl.cyber.trainees.dziedziczenie.Model;
+import pl.cyber.trainees.spotkania.Petle;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,17 +29,8 @@ public class SimpleApp {
        // modelPojazdu1.setNaped("przód");
        // modelPojazdu1.setRocznik("2015");
 
-        public class Petle {
-            public static void main(String[] args) {
-                for (int i = 1; i < 101; i++) {
-
-                    System.out.println("Liczby od 1 do 100:" + i);
-
-                }
-            }
-            private void wyswietlOd1Do100(){
-
-            }
+       Petle petle = new Petle();
+               petle.wyswietlOd1Do100();
         }
         //List<String> strings = new ArrayList<>();
        // strings.add("pierwszy");
@@ -78,11 +70,3 @@ public class SimpleApp {
      //   System.out.println(modelPojazdu3.getNaped());
      //   System.out.println(modelPojazdu3.getNazwa());
     }
-
-
-
-
-
-
-
-}
