@@ -9,8 +9,22 @@ import java.nio.file.FileSystemNotFoundException;
 import java.util.Scanner;
 
 public class OdczytDanych {
+    public String wprowadzonaWartoscZKlaswiatury() {
+        // do naszej apki wprowadzamy wartości które poda użytkownik
+        // Scanner --> obiekt pozwalający na odczyt danych z klawiatury
+        // System.in --> obiekt reprezentujący InputStream, odpowiada za przetwarzanie danych
+        Scanner scan = new Scanner(System.in);
+
+        return scan.nextLine();
+    }
 
     //nowa metoda, zwracająca stringa daneZPliku
+    public String daneZPliku(File plikZew) throws FileNotFoundException
+    {
+
+        Scanner scan = new Scanner(plikZew);
+        return scan.nextLine();
+    }
 
     public Model daneOModeluPojazdu(File plikZew) throws FileNotFoundException {
         Model modelPojazdu = new Model();
