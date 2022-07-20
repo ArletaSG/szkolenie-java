@@ -1,0 +1,3 @@
+VW, 2020, przód, Passat, 10000, 2.0, ZIELONY
+Ford, 2018, przód, Fiesta, 20000, 1.4, CZERWONY
+Toyota, 2021, 4x4, Rav4, 5000, NIEBIESKI

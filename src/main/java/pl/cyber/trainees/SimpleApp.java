@@ -1,252 +1,208 @@
 package pl.cyber.trainees;
 
-import org.codehaus.groovy.transform.SourceURIASTTransformation;
+import pl.cyber.trainees.dziedziczenie.Kolor;
+import pl.cyber.trainees.dziedziczenie.Model;
+import pl.cyber.trainees.kalkulator.Dodawanie;
+import pl.cyber.trainees.kalkulator.Mnozenie;
+import pl.cyber.trainees.service.OdczytDanych;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
+import java.io.File;
+import java.io.FileNotFoundException;
 
 public class SimpleApp {
 
-    enum Stan {on, off}
-    enum Plec {kobieta, mezczyzna}
+    private static java.lang.String String;
 
-    public static String SEPARATOR_SPACJA = " ";
+    public static void main(String[] args) throws FileNotFoundException {
+        OdczytDanych odczytDanych = new OdczytDanych();
 
-    public static void main(String[] args) {
-
-        int scale = 0;
-
-//        String space = " ";
-//        String a = "Ala";
-//        String b = "ma kota";
-//
-//
-//        System.out.println(a + space + b);
-//        System.out.println(a + SEPARATOR_SPACJA + b);
-
-
-//praca domowa
-        //Utworzenie 2 zmiennych typu String i ich inicjalizacja
-        //Utworzenie 2 zmiennych typu Integer i ich inicjalizacja
-        //Utworzenie 2 zmiennych typu Double i ich inicjalizacja
-
-        //dodawanie , odejmowanie, monożenie i dzielenie.
-        //proszę o wykonanie działania dzielenie przez 0
+       // odczytujemy dane z klawiatury
+       //System.out.println("Jak masz na imię?");
+      // String firstName = odczytDanych.wprowadzonaWartoscZKlaswiatury();
+       //System.out.println("Witaj " + firstName + "!!!");
 
 
 
-        //region Zaokrąglanie liczb
-        roundNumber("2.34", scale);
-        System.out.println("NEXT");
-        roundNumber("2.44", scale);
-        System.out.println("NEXT");
-        roundNumber("2.46", scale);
-        System.out.println("NEXT");
-        roundNumber("2.5", scale);
-        System.out.println("NEXT");
-        roundNumber("2.55", scale);
-        System.out.println("NEXT");
-        roundNumber("2.6", scale);
-        System.out.println("NEXT");
-        //endregion
+        //dodawanie 5 liczb z klawiatury z parseInt i z klas i ich wypisanie
+        System.out.println("podaj pierwszą liczbę całkowitą: ");
+        String liczba1 = odczytDanych.wprowadzonaWartoscZKlaswiatury();
+        System.out.println("podaj drugą liczbę całkowitą: ");
+        String liczba2 = odczytDanych.wprowadzonaWartoscZKlaswiatury();
+        System.out.println("podaj trzecią liczbę całkowitą: ");
+        String liczba3 = odczytDanych.wprowadzonaWartoscZKlaswiatury();
+        System.out.println("podaj czwartą liczbę całkowitą: ");
+        String liczba4 = odczytDanych.wprowadzonaWartoscZKlaswiatury();
+        System.out.println("podaj piątą liczbę całkowitą: ");
+        String liczba5 = odczytDanych.wprowadzonaWartoscZKlaswiatury();
+        Dodawanie dodawanie5liczbInt = new Dodawanie();
 
-        //region praca domowa
-        String valString1 = "pierwszy string";
-        String valString2 = new String("drugi string"); // konstrukcja stowosana np czy odczycie informacji z pliku tekstowego zamiast napisu wtedy podaje się jakąś wartośc ze zmiennej
+        //String w = dodawanie5liczb.add(liczba1, liczba2);
+        //System.out.println("Witaj " + w + "!!!");
+        int l1 = Integer.parseInt(liczba1);
+        int l2 = Integer.parseInt(liczba2);
+        int l3 = Integer.parseInt(liczba3);
+        int l4 = Integer.parseInt(liczba4);
+        int l5 = Integer.parseInt(liczba5);
+        Integer w = l1+l2+l3+l4+l5;
+        System.out.println("Dodawanie liczb [a, b, c, d, e]:" + w);
+        Integer z = dodawanie5liczbInt.add(l1+l2+l3,l4+l5);
+        System.out.println("z użyciem klas:Dodawanie liczb [a, b, c, d, e]:" + z);
 
-        Integer valInt1 = 2;
-        Integer valInt2 = Integer.valueOf("3"); // konstrukcja stosowana przy inicjalizacji poprzez wartości napisowe (inaczej Stringi)
+             //dodawanie 5 liczb Double z klawiatury i  ich wypisanie
 
-        System.out.println("dodawanie: " + add(valInt1, valInt2) + ", odejmowanie: " + subtract(valInt1, valInt2) + ", mnożenie: " + multiplication(valInt1, valInt2) + ", dzielenie: " + division(valInt1, valInt2));
 
-        Double valDouble1 = 10.5;
-        Double valDouble2 = Double.valueOf("4.5");
+        System.out.println("podaj pierwszą liczbę double np. 2.5: ");
+        String liczbad1 = odczytDanych.wprowadzonaWartoscZKlaswiatury();
+        System.out.println("podaj drugą liczbę double: ");
+        String liczbad2 = odczytDanych.wprowadzonaWartoscZKlaswiatury();
+        System.out.println("podaj trzecią liczbę double: ");
+        String liczbad3 = odczytDanych.wprowadzonaWartoscZKlaswiatury();
+        System.out.println("podaj czwartą liczbę double: ");
+        String liczbad4 = odczytDanych.wprowadzonaWartoscZKlaswiatury();
+        System.out.println("podaj piątą liczbę double: ");
+        String liczbad5 = odczytDanych.wprowadzonaWartoscZKlaswiatury();
+        Dodawanie dodawanie5liczbDouble = new Dodawanie();
+        Double d1 = Double.parseDouble(liczbad1);
+        Double d2 = Double.parseDouble(liczbad2);
+        Double d3 = Double.parseDouble(liczbad3);
+        Double d4 = Double.parseDouble(liczbad4);
+        Double d5 = Double.parseDouble(liczbad5);
+        Double x = d1 + d2 + d3 + d4 + d5;
+        System.out.println("Dodawanie liczb [a, b, c, d, e]:" + x);
 
-        System.out.println("dodawanie: " + add(valDouble1, valDouble2) + ", odejmowanie: " + subtract(valDouble1, valDouble2) + ", mnożenie: " + multiplication(valDouble1, valDouble2) + ", dzielenie: " + division(valDouble1, valDouble2));
 
-        BigDecimal valBigDec1 = BigDecimal.valueOf(10.5);
-        BigDecimal valBigDec2 = new BigDecimal("4.5");
+        //mnożenie 5 liczb każda razy 10 i wyświetlenie (Integer i Double)
+        Mnozenie mnozenieliczbIntRazy10 = new Mnozenie();
+        Integer n1 = mnozenieliczbIntRazy10.multiplication(10, l1);
+        Integer n2 = mnozenieliczbIntRazy10.multiplication(10, l2);
+        Integer n3 = mnozenieliczbIntRazy10.multiplication(10, l3);
+        Integer n4 = mnozenieliczbIntRazy10.multiplication(10, l4);
+        Integer n5 = mnozenieliczbIntRazy10.multiplication(10, l5);
+        System.out.println("Mnożenie przez 10 liczb: ");
+        System.out.println("a*10: " + n1);
+        System.out.println("b*10: " + n2);
+        System.out.println("c*10: " + n3);
+        System.out.println("d*10: " + n4);
+        System.out.println("e*10: " + n5);
 
-        System.out.println("dodawanie: " + add(valBigDec1, valBigDec2) + ", odejmowanie: " + subtract(valBigDec1, valBigDec2) + ", mnożenie: " + multiplication(valBigDec1, valBigDec2) + ", dzielenie: " + division(valBigDec1, valBigDec2));
+        Mnozenie mnozenieliczbDoubleRazy10 = new Mnozenie();
+        Double m1 = mnozenieliczbDoubleRazy10.multiplication(10.0, d1);
+        Double m2 = mnozenieliczbDoubleRazy10.multiplication(10.0, d2);
+        Double m3 = mnozenieliczbDoubleRazy10.multiplication(10.0, d3);
+        Double m4 = mnozenieliczbDoubleRazy10.multiplication(10.0, d4);
+        Double m5 = mnozenieliczbDoubleRazy10.multiplication(10.0, d5);
+        System.out.println("Mnożenie przez 10 liczb: ");
+        System.out.println("a*10: " + m1);
+        System.out.println("b*10: " + m2);
+        System.out.println("c*10: " + m3);
+        System.out.println("d*10: " + m4);
+        System.out.println("e*10: " + m5);
 
-//        Problem dzielenia przez 0
 
-//        System.out.println("Dzielenie przez 0" +  division(valDouble1, 0.0));
-//        System.out.println("Dzielenie przez 0" +  division(valBigDec1, BigDecimal.ZERO));
 
-//Rozwiązanie:
-        System.out.println("Dzielenie przez 0: " +  divisionByZero(valDouble1, 0.0));
-        System.out.println("Dzielenie przez 0: " +  divisionByZero(valBigDec1, BigDecimal.ZERO));
-        //endregion
+
+
+
+
+
+        System.out.println("Zadanie 2:");
+        //String firstNameFromFile = odczytDanych.daneZPliku(new File("src/main/resources/daneZPliku.txt"));
+        Model modelPojazduZPliku1 = odczytDanych.daneOModeluPojazdu(new File("src/main/resources/samochody/samochod1.txt"));
+        Model modelPojazduZPliku2 = odczytDanych.daneOModeluPojazdu(new File("src/main/resources/samochody/samochod2.txt"));
+        Model modelPojazduZPliku3 = odczytDanych.daneOModeluPojazdu(new File("src/main/resources/samochody/samochod3.txt"));
+
+       // System.out.println(firstNameFromFile);
+        System.out.println("Pojazd nr 1: " + modelPojazduZPliku1);
+        System.out.println("Pojazd nr 2: " + modelPojazduZPliku2);
+        System.out.println("Pojazd nr 3: " + modelPojazduZPliku3);
+        Integer lacznyPrzebieg = modelPojazduZPliku1.getPrzebieg() + modelPojazduZPliku2.getPrzebieg() + modelPojazduZPliku3.getPrzebieg();
+        System.out.println("Łączna ilość przejechanych km: " + lacznyPrzebieg);
+        System.out.println("Dostępne pojemności silników samochodów to: " + modelPojazduZPliku1.getPojemnoscSilnika() + ", " + modelPojazduZPliku2.getPojemnoscSilnika() + ", " + modelPojazduZPliku3.getPojemnoscSilnika());
+
+
+
+        //Model modelPojazdu1 = new Model();
+
+        //var modelPojazdu1 = new Model("VW", "2020",
+        //        "przód", "Passat", 10000,
+        //        2.0, Kolor.ZIELONY);
+        //var modelPojazdu1 = new Model("Ford", "2008",
+        //        "przód", "Fiesta", 50000,
+        //        1.4, Kolor.CZERWONY);
+        //var modelPojazdu3 = new Model("Toyota", "2020",
+        //        "4x4", "Rav4", 10000,
+        //        2.0, Kolor.valueOf("NIEBIESKI"));
+
+
+        //modelPojazdu1.setKolor(Kolor.CZERWONY);
+        // modelPojazdu1.setNazwa("Fiesta");
+        // modelPojazdu1.setPrzebieg(25000);
+        // modelPojazdu1.setPojemnoscSilnika(1.4);
+        // modelPojazdu1.setMarka("Ford");
+        // modelPojazdu1.setNaped("przód");
+        // modelPojazdu1.setRocznik("2015");
+
+       // Petle petle = new Petle();
+       // petle.wyswietlOd1Do100();
+       // List<Double> listaDouble = null;
+       // listaDouble = new ArrayList<>(Arrays.asList( //Ctrl+P oczekuje zmiennej Double zgodnej z listą
+       //         1.0,
+       //         2.0,
+       //         5.0,
+       //         10.0,
+       //         20.0
+       // ));
+       // listaDouble.add(30.0);
+
+       // petle.dodawanieElementowListy(listaDouble); //odwołanie się do klasy petle i metody dodawanieElementowListy
+
+       // petle.wyswietlSet();
+
+
+
+
+
 
     }
 
-    public static int add(int l1, int l2) {
-        var result = l1 + l2;
-        return result;
 
-//        return l1 + l2;
+
+        //List<String> strings = new ArrayList<>();
+       // strings.add("pierwszy");
+       // strings.add("drugi");
+       // strings.add("trzeci");
+
+        //for (int i=0; i < 3; i++) {
+       // }
+       // for (int i=0; i < strings.size(); i++) {
+       //     var tmp = strings.get(i);
+
+        //    if (tmp == "pierwszy") {
+        //        System.out.println("pierwszy element" + strings.get(i));
+        //    } else {
+        //        System.out.println("inny element " + strings.get(i));
+        //    }
+       //  }
+
+        //for (String element : strings) {
+
+        //    if (element == "pierwszy") {
+        //        System.out.println("pierwszy element" + element);
+        //    } else {
+        //        System.out.println("inny element " + element);
+        //    }
+       // }
+
+
+
+        //  System.out.println(strings.get(1));
+
+      //System.out.println(modelPojazdu1.toString());
+
+      //System.out.println(modelPojazdu2.toString());
+      //System.out.println(modelPojazdu3.toString());
+     //   System.out.println(modelPojazdu2.getMarka());
+     //   System.out.println(modelPojazdu3.getNaped());
+     //   System.out.println(modelPojazdu3.getNazwa());
+
     }
-
-    public static String concat(String l1, String l2) {
-        var result = l1 + l2 + "\n";
-        return result;
-    }
-
-    public static void roundNumber(final String number, int scale) {  //To najczęstszy sposób gdzie ja stosuję zaokrąglanie liczb
-        BigDecimal value = BigDecimal.valueOf(Double.parseDouble(number));
-        var roundHalfUp = value;
-        roundHalfUp = roundHalfUp.setScale(scale, RoundingMode.UP);
-
-        var roundHalfDown = value;
-        roundHalfDown = roundHalfDown.setScale(scale, RoundingMode.DOWN);
-
-        var roundHalfFloor = value;
-        roundHalfUp = roundHalfUp.setScale(scale, RoundingMode.FLOOR);
-
-        System.out.println("Round Half up: " + roundHalfUp);
-        System.out.println("Round Half down: " + roundHalfDown);
-        System.out.println("Round Half floor: " + roundHalfFloor);
-    }
-
-    public static Integer add(final Integer val, final Integer val2) { return val + val2; }
-    public static Integer subtract(final Integer val, final Integer val2) { return val - val2; }
-    public static Integer multiplication(final Integer val, final Integer val2) { return val * val2; }
-    public static Integer division(final Integer val, final Integer val2) { return val / val2; }
-
-    public static Double add(final Double val, final Double val2) { return val + val2; }
-    public static Double subtract(final Double val, final Double val2) { return val - val2; }
-    public static Double multiplication(final Double val, final Double val2) { return val * val2; }
-    public static Double division(final Double val, final Double val2) { return val / val2; }
-
-    public static BigDecimal add(final BigDecimal val, final BigDecimal val2) { return val.add(val2); }
-    public static BigDecimal subtract(final BigDecimal val, final BigDecimal val2) { return val.subtract(val2); }
-    public static BigDecimal multiplication(final BigDecimal val, final BigDecimal val2) { return val.multiply(val2); }
-    public static BigDecimal division(final BigDecimal val, final BigDecimal val2) {
-        return val.divide(val2, 2, RoundingMode.HALF_DOWN);
-    }
-
-    public static Double divisionByZero(final Double val, final Double val2) {
-        var zero = Double.valueOf(0);
-        if(zero.equals(val2)) {
-            System.out.println("Dzialanie przed zero!!!!!");
-            return 0.0;
-        }
-        return val / val2;
-    }
-
-    public static BigDecimal divisionByZero(final BigDecimal val, final BigDecimal val2) {
-        BigDecimal divide = BigDecimal.ZERO;
-
-        try {
-            divide = val.divide(val2, 2, RoundingMode.HALF_DOWN);
-        } catch (final ArithmeticException ex) {
-            System.out.println("Działanie dzielenia przez zero!!!!!!");
-        }
-        return divide;
-    }
-}
-
-
-/*
-
-        /*
-        1. Klasa -> Class
-        2. Obiekt -> Object
-        3. Zmienna -> Variables
-            typy, deklaracja zmiennych
-
-//region Variables
-
-    int wartoscBoolean = 1; //Ta zmienna może przyjmować wartości 0 lub 1
-
-
-
-    //Ctrl+ lewy przycisk myszy na 'String'
-    String tekst = "";  //-> var string = "" -> string s = ""
-    BigDecimal value = BigDecimal.valueOf(1);
-    BigDecimal value1 = BigDecimal.ONE;
-
-//endregion
-
-// Program wyświetlający
-// w terminalu przykładowy tekst
-
-//        System.out.println("My first Application");
-        System.out.println("My first Application");
-            System.out.println("Get BigDecimal value:" + value + " valkue1: " + value1);
-
-/*
- Ctrl+/
-tekst
-tekst
-tekst
-tekst
-tekst
-tekst
-
-         */
-/*
-
-            int intValue = 4000000;
-            int intValueB = intValue + 1000;
-
-            System.out.println(intValue);
-            System.out.println(intValue + 100);
-            System.out.println(intValueB);
-
-
-            double doubleValue = 2.0;
-
-            System.out.println(doubleValue);
-
-            char znak = 'a';
-            char[] tabZnakow = {'\u0043', 'a'};
-
-            System.out.println("add: " + add(1, 3));
-            System.out.println("concat: " + concat("Jan ", "Nowak"));
-
-
-
-            System.out.println("\nLiterały i\tznaki specjalne");
-            System.out.println("\nLiterały i" + "   " + "znaki specjalne\b");
-
-            System.out.println("\'Literały\' i " + "\"znaki\" specjalne \\"); // to jest konentarz
-
-
-//        "C:\\Users\\java\\Pulpit\\dockument.txt"
-
-
-            int intValue5 = 4000000;
-            Integer integerValue3 = Integer.valueOf(4000000);
-            Integer integerValue2 = Integer.valueOf("4000000");
-            Integer integerValue4 = Integer.parseInt("4000000");
-
-            System.out.println("Integer value: " + integerValue3);
-            System.out.println("Integer value: " + integerValue2);
-            System.out.println("Integer value: " + integerValue4);
-
-            boolean boolValue = false;
-            Boolean boolVal = Boolean.FALSE; // Boolean.TRUE
-            Boolean boolVal2 = Boolean.valueOf("true");
-
-            System.out.println("Boolean value: " + boolVal);
-            System.out.println("Boolean value: " + boolVal2);
-
-            boolean boolValue4;
-            if (wartoscBoolean == 1) {
-            boolValue4 = true;
-            } else {
-            boolValue4 = false;
-            }
-            System.out.println(boolValue4);
-
-
-            Double cenaDouble = 12.5;
-            Long cenaInt = Math.round(cenaDouble);
-
-            System.out.println(cenaInt);
-            //zaokrąglanie inny sposób
-
-
- */
