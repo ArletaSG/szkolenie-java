@@ -49,4 +49,11 @@ for(int i = 0; i<5; i--); { -- tzw pętla nieskończona
 
     //utowrzyć metodę true lub false jeśli podana liczba w parametrze nie jest równa 10
 
+    // Zadanie nr 1
+// Wykonać metodę która przyjmie jako parametr List<BigDecimal>, następnie wykona następujące zagadnienia:
+// a) wyświetli każdy element listy jeden po drugim
+// b) każdy element listy doda do siebie.
+
+
+
 }

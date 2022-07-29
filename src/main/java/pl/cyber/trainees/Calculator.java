@@ -1,7 +1,7 @@
 package pl.cyber.trainees;
 
 public class Calculator {
-    public static void main(String[] args)
+    public void main(String[] args)
     {
         new Add(12,13);
         new Substraction(25,13);

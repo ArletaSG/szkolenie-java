@@ -21,7 +21,7 @@ import static pl.cyber.trainees.pracaDomowa.PodzielnosciPotega3Pierwiastek2.*;
 public class SimpleZD29tydzien {
 
 
-    public static void main(String[] args) {
+    public  void main(String[] args) {
         Osoba osoba1 = new Osoba(42, "Arleta");
         //System.out.println("Twój wiek to: " + osoba1.wiek);
         //System.out.println("Twoje imię to: " +osoba1.imie);
