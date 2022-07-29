@@ -17,7 +17,7 @@ public class Osoba {
         }
 
         public String getImie() {
-        // System.out.println("Twoje imię to: " + imie);
+        // System.out.println("Twoje imię to: " + imie); LEPIEJ SOUT TYLKO W KLASIE URUCHOMIENIOWEJ NIŻ TU GDZIE GETWIEK
             return imie;
         }
 

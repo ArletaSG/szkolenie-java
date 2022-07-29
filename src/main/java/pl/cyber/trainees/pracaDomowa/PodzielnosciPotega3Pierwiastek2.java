@@ -2,7 +2,7 @@ package pl.cyber.trainees.pracaDomowa;
 
 
 public class PodzielnosciPotega3Pierwiastek2 {
-    public static boolean podzielnaPrzez2(Double liczba) {
+    public static boolean podzielnaPrzez2(Double liczba) { //PARAMETR TYLKO DO OPERACJI TO WPISAĆ PRZED NIM FINAL!!!
         if (liczba % 2 == 0) {
             return true;
         } else {
@@ -11,7 +11,7 @@ public class PodzielnosciPotega3Pierwiastek2 {
     }
 
     public static boolean podzielnaPrzez3i5(Double liczba) {
-        return liczba % 3 == 0 && liczba % 5 == 0;
+        return liczba % 3 == 0 && liczba % 5 == 0; // UTRUDNIONA KONSTRIKCJA, MOŻNA LEPIEJ PRZEZ IF
     }
 
     public static Double doPotegiTrzeciej(Double liczba) {
@@ -19,6 +19,7 @@ public class PodzielnosciPotega3Pierwiastek2 {
     }
 
     public static Double pierwiastekKwadratowy(Double liczba) {
+
         return Math.sqrt(liczba);
     }
 
