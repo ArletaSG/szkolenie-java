@@ -8,8 +8,7 @@ package pl.cyber.trainees; // oreślenie pakietu wramach projektu, gdzie
 
 //region miejsce na importy
 
-import pl.cyber.trainees.wyjasnienia.Basics;
-import pl.cyber.trainees.wyjasnienia.BasicsInteger;
+import pl.cyber.trainees.wyjasnienia.*;
 
 //poprzez importy powinniśmy rozumieć użycie dodatkowych bibliotek w naszej klasie
 
@@ -27,6 +26,18 @@ import pl.cyber.trainees.wyjasnienia.BasicsInteger;
 //nie może być żadnego kodu, natomiast przed klasą możemy jedynie pisać import'y oraz package.
 public class SimpleApp {
 
+    public static void main(String[] args) { //TO ZAWSZE MUSI BYĆ PO STRUKTURZE KLASY
+        Petle petle = new Petle();
+        petle.uruchom();
+        //ChoinkaZGwiazdekTablica choinka = new ChoinkaZGwiazdekTablica();
+        //choinka.wyswietlanieGwiazdek();
+        //InstrukcjeWarunkowe instrukcjeWarunkowe = new InstrukcjeWarunkowe();
+        //instrukcjeWarunkowe.uruchom();
+    }
+
+}
+
+    /*
     //w ramach klasy deklarujemy zmienne globalne oraz metody
     public static String SEPARATOR_SPACJA = " "; //zmienna globalna dostępna w całej klasie.
     //konstrukcja zmiennych globalnych
