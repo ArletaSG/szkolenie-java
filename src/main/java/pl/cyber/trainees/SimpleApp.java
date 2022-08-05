@@ -29,7 +29,7 @@ public class SimpleApp {
     public static void main(String[] args) { //TO ZAWSZE MUSI BYĆ PO STRUKTURZE KLASY
         Petle petle = new Petle();
         petle.uruchom();
-        //ChoinkaZGwiazdekTablica choinka = new ChoinkaZGwiazdekTablica();
+        //4ChoinkaZGwiazdekTablica choinka = new ChoinkaZGwiazdekTablica();
         //choinka.wyswietlanieGwiazdek();
         //InstrukcjeWarunkowe instrukcjeWarunkowe = new InstrukcjeWarunkowe();
         //instrukcjeWarunkowe.uruchom();

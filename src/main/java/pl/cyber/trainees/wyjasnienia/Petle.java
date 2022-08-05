@@ -3,6 +3,7 @@ package pl.cyber.trainees.wyjasnienia;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Petle {
     /*
@@ -69,10 +70,17 @@ for(int i = 0; i<5; i--); { -- tzw pętla nieskończona
         //rozwiazanieZadanie1(lista); //odwołanie sie do metody z klasy Petle
         //choinkaProsta();
         //choinkaRozbudowana(3);
-       // choinkaRozbudowana2(3);
+        // choinkaRozbudowana2(3);
         //wyswietlPodzielnePrzez5Od1Do100();
-       // pierwszyProgramWhile();
-        sumaLiczbZForIWhile();
+       // PodzielnePrzez5Od1Do100While();
+       // TylkoPodzielneWhile(); //Pana
+        //WhileDo100();//Pana
+        //WhileLicznikx2Do100();
+        // pierwszyProgramWhile();
+        //sumaLiczbZForIWhile();
+        silniaProsta();
+        //System.out.println("wynik silni dla 4!: "+ silniaRekurencja(4));
+        System.out.println("Ciąg Fibonacciego dla n=6: " + ciagFibonacciego(6));
 
     }
 
@@ -149,8 +157,52 @@ for(int i = 0; i<5; i--); { -- tzw pętla nieskończona
                 }
                 System.out.println();
             }
-                }
+        }
 
+    }
+    //Zadanie SILNIA:
+    private void silniaProsta() {
+        System.out.println("podaj liczbę n, dla której policzymy silnię: ");
+        Scanner scan = new Scanner(System.in);
+        Integer n = scan.nextInt();
+        Integer s = 1;
+        Integer i =0;
+
+//        Integer result = 0;
+        while (i<n) { //
+            i+=1; //s*=i; ALE trzeba i = 1 zadeklarować, bo mnożenie *0
+            s=s*i;//i++
+        }
+//        n! = s; można tu wyświetlić jako result = s; (wcześniej zadeklarować), ale to widać w sout pod s
+        System.out.println("Liczba" + n +"! wynosi: " +s);
+        // i na for to samo:
+        s =1;
+        for (int j = 1; j<=n; j++) {
+            s = s * j;
+        }
+        System.out.println("n! wynosi "+ s);
+
+    }
+    private Integer silniaRekurencja(Integer n) { //w rekurencji parametr nie może być w metodzie tylko w ()
+        // było void ale nie może musi być Integer!!!
+        if (n>1) {
+           return n * silniaRekurencja(n-1);
+        }
+        else {
+            return 1;
+        }
+    }
+// ZD CIĄG FIBONACCIEGO
+    private Integer ciagFibonacciego (Integer n) {
+        if (n>1) {
+            return ciagFibonacciego(n-1)*ciagFibonacciego(n-2);
+        }
+        else if (n==1){
+            return 1;
+        }
+        else {
+            return 0;
+        }
     }
 
     // Zadanie
@@ -158,24 +210,91 @@ for(int i = 0; i<5; i--); { -- tzw pętla nieskończona
 //  Natomiast wyświetli tylko te które są podzielne przez 5
     //i dodanie ich do siebie
 
-    private void wyswietlPodzielnePrzez5Od1Do100 (){ // tu w () nie trzeba deklarować zmiennej
+    private void wyswietlPodzielnePrzez5Od1Do100() { // tu w () nie trzeba deklarować zmiennej
         Integer sumaLiczb = 0;
         Integer iloscLiczb = 0;
 
-        for (int i=1; i<=100; i++) { //wtedy tu przy i musi byc int
-            if (i % 5 ==0) {
+        for (int i = 1; i <= 100; i++) { //wtedy tu przy i musi byc int
+            if (i % 5 == 0) {
                 System.out.println(i);
-                sumaLiczb+=i; //gdyby tu było zamiast i 1, to pokazuje ilosc liczb :5
-                iloscLiczb+=1;
+                sumaLiczb += i; //gdyby tu było zamiast i 1, to pokazuje ilosc liczb :5
+                iloscLiczb += 1;
             }
 
             //else {
-              //  System.out.println();//nie potrzeba bo będą niepotrzebne puste wiersze
+            //  System.out.println();//nie potrzeba bo będą niepotrzebne puste wiersze
             //}
         }
         System.out.println("Suma liczb wynosi: " + sumaLiczb);
         System.out.println("Ilość liczb wynosi: " + iloscLiczb);
     }
+
+    private void PodzielnePrzez5Od1Do100While() {
+        Integer i = 1;
+        Integer sumaLiczb = 0;
+        Integer ileRazy = 1;
+        while (i < 100) {
+            if (i % 5 == 0) {
+                System.out.println(i);
+                sumaLiczb += i; //gdyby tu było zamiast i 1, to pokazuje ilosc liczb :5
+                ileRazy += 1;
+                            }
+            i+=1;
+        }
+        System.out.println("Suma liczb wynosi: " + sumaLiczb);
+        System.out.println("Ilość pętli wynosi: " + ileRazy);
+    }
+    private void WhileLicznikx2Do100 () {
+        Integer i = 0;
+        Integer liczba = 1;
+        while (true) {
+            System.out.println("Liczba: " + liczba);
+            liczba *=2;
+            i++;
+            if (liczba>100) {
+                break;
+            }
+        }
+
+        System.out.println("Ile razy w pętli: " + i);
+    }
+
+   /* //lub Pana wersja ZD:
+    private void whileDo100() {
+        Integer licznik = 0;
+        Integer ileRazy = 0;
+
+        while (licznik < 101) {
+
+            ileRazy++;
+            System.out.println(licznik + ", ");
+
+            if (licznik!=0) {
+                licznik *=2;
+                            }
+            else {
+                licznik ++;
+            }
+        }
+    }
+    public void tylkoPodzielneWhile() {
+        Integer sumaLiczb = 0;
+        Integer iloscLiczb = 0;
+
+        Integer licznik = 0;
+        while(licznik <101) {
+            if (licznik % 5 ==0) {
+                System.out.println(licznik + ", ");
+
+                sumaLiczb += licznik;
+                iloscLiczb += 1;
+            }
+            licznik++;
+        }
+        System.out.println("Suma liczb:" + sumaLiczb);
+        System.out.println("Ilość znalezionych liczb podzielnych przez 5: " + iloscLiczb);
+    }
+*/
 
 
     /*
@@ -227,7 +346,7 @@ liczba++;
     //wykonać for od 1 do 10 wyświetlić sumęFor i następnie wykonać to samo przy użyciu while/do-while
     //oraz wykorzystać if do porównania liczb, jeśli się uzgodnią to wyświetlamy true w przeciwnym wypadku false
 
-    private void sumaLiczbZForIWhile(){
+    public void sumaLiczbZForIWhile(){
         int i=1;
         int sumaLiczb1=0;
         int sumaLiczb2=0;
@@ -264,6 +383,7 @@ liczba++;
            System.out.println(false);
        }
     }
+
 
 
 }
