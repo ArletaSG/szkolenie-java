@@ -78,9 +78,9 @@ for(int i = 0; i<5; i--); { -- tzw pętla nieskończona
         //WhileLicznikx2Do100();
         // pierwszyProgramWhile();
         //sumaLiczbZForIWhile();
-        silniaProsta();
+        //silniaProsta();
         //System.out.println("wynik silni dla 4!: "+ silniaRekurencja(4));
-        System.out.println("Ciąg Fibonacciego dla n=6: " + ciagFibonacciego(6));
+       // System.out.println("Ciąg Fibonacciego dla n=6: " + ciagFibonacciego(6));
 
     }
 
@@ -192,12 +192,13 @@ for(int i = 0; i<5; i--); { -- tzw pętla nieskończona
             return 1;
         }
     }
-// ZD CIĄG FIBONACCIEGO
-    private Integer ciagFibonacciego (Integer n) {
-        if (n>1) {
+// ZD CIĄG FIBONACCIEGO?
+   /* private Integer ciagFibonacciego (Integer n) {
+        switch (n>1) {
+            case "1":
             return ciagFibonacciego(n-1)*ciagFibonacciego(n-2);
-        }
-        else if (n==1){
+            case "2":
+         (n==1){
             return 1;
         }
         else {

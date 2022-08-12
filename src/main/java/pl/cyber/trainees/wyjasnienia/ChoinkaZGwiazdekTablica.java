@@ -33,7 +33,7 @@ public class ChoinkaZGwiazdekTablica {
         for (int i =0; i < wysokosc/2+1;i++)
         {
             System.out.println();
-            for(int j=0;j < wysokosc;j++)
+            for(int j=0; j < wysokosc;j++)
             {
                 System.out.print(choinka[i][j]);
             }

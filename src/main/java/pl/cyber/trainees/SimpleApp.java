@@ -10,6 +10,8 @@ package pl.cyber.trainees; // oreślenie pakietu wramach projektu, gdzie
 
 import pl.cyber.trainees.wyjasnienia.*;
 
+import java.io.IOException;
+
 //poprzez importy powinniśmy rozumieć użycie dodatkowych bibliotek w naszej klasie
 
 //endregion
@@ -26,13 +28,18 @@ import pl.cyber.trainees.wyjasnienia.*;
 //nie może być żadnego kodu, natomiast przed klasą możemy jedynie pisać import'y oraz package.
 public class SimpleApp {
 
-    public static void main(String[] args) { //TO ZAWSZE MUSI BYĆ PO STRUKTURZE KLASY
-        Petle petle = new Petle();
-        petle.uruchom();
+    public static void main(String[] args) throws Exception{ //TO ZAWSZE MUSI BYĆ PO STRUKTURZE KLASY
+                                                //ZMIENIĆ NA OGÓLNY EXCEPTION
+        //Petle petle = new Petle();
+        //petle.uruchom();
         //4ChoinkaZGwiazdekTablica choinka = new ChoinkaZGwiazdekTablica();
         //choinka.wyswietlanieGwiazdek();
         //InstrukcjeWarunkowe instrukcjeWarunkowe = new InstrukcjeWarunkowe();
         //instrukcjeWarunkowe.uruchom();
+        //Tablice tablice = new Tablice();
+       // tablice.uruchom();
+        Wyjatki wyjatki = new Wyjatki();
+        wyjatki.uruchom();
     }
 
 }
