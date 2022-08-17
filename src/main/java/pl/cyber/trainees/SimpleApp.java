@@ -9,8 +9,10 @@ package pl.cyber.trainees; // oreślenie pakietu wramach projektu, gdzie
 //region miejsce na importy
 
 import pl.cyber.trainees.wyjasnienia.*;
+import pl.cyber.trainees.wyjasnienia.zwierzeta.Kot;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 //poprzez importy powinniśmy rozumieć użycie dodatkowych bibliotek w naszej klasie
 
@@ -38,8 +40,17 @@ public class SimpleApp {
         //instrukcjeWarunkowe.uruchom();
         //Tablice tablice = new Tablice();
        // tablice.uruchom();
-        Wyjatki wyjatki = new Wyjatki();
-        wyjatki.uruchom();
+      //  Wyjatki wyjatki = new Wyjatki();
+      //  wyjatki.uruchom();
+       // Obiekty obiekty = new Obiekty();
+       // obiekty.uruchom();
+
+//        Kot kot = new Kot("Felix", LocalDate.of(2020, 7, 2), 3.0, "MARIUSZ");
+//        System.out.println(kot.przedstawSie());
+
+        Obiekty obiekty = new Obiekty();
+        obiekty.uruchom();
+
     }
 
 }

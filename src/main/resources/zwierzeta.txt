@@ -1,0 +1,7 @@
+PIES,Goldi,2020/05/10,14,Mariusz,250,true
+PIES,Luna,2010/09/01,26,Arleta,560,true
+KOT,Felix,2020/07/02,3.0,Mariusz,200.0,true
+KOT,Bazyl,2019/06/01,2.5,Arleta,190.0,false
+KOT,Mruczek,2018/05/18,4.0,Arleta,240,true
+GAD,Hugo,2016/08/18,0.4,Arleta,3.0,false
+PTAKI,Basia,2010/03/30,0.3,Arleta,3,5,false
