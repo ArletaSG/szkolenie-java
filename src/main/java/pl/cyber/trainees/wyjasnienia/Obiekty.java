@@ -261,6 +261,17 @@ Dodatkowo wywołać metodę (skorzystamy z przys łaniani metod) dajGlos()
                 zwierzeta.add(ptaki.convertFromFile(rowInFile));
             }
         }
+        /* albo switch
+        switch(zw.getClass().getSimpleName()) {
+        case "Kot":
+          System.out.println("kottttttttttt");
+          break;
+        case "Pies":
+          System.out.println("piessssss");
+          break;
+      }
+
+         */
 
         return zwierzeta;
     }
