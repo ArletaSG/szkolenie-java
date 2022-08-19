@@ -254,6 +254,18 @@ Dodatkowo wywołać metodę (skorzystamy z przys łaniani metod) dajGlos()
                 Kot kot = new Kot();
                 zwierzeta.add(kot.convertFromFile(rowInFile));
             }
+
+                    /* albo switch
+        switch(zw.getClass().getSimpleName()) {
+        case "Kot":
+          System.out.println("kottttttttttt");
+          break;
+        case "Pies":
+          System.out.println("piessssss");
+          break;
+      }
+
+         */
         }
 
         return zwierzeta;
