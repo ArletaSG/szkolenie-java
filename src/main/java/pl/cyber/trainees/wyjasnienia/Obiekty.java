@@ -253,6 +253,12 @@ Dodatkowo wywołać metodę (skorzystamy z przys łaniani metod) dajGlos()
             } else if (ZwierzeEnum.KOT.name().equals(tablicaPliku[0])) {
                 Kot kot = new Kot();
                 zwierzeta.add(kot.convertFromFile(rowInFile));
+            } else if (ZwierzeEnum.GAD.name().equals(tablicaPliku[0])) {
+                Gad gad = new Gad();
+                zwierzeta.add(gad.convertFromFile(rowInFile));
+            }else if (ZwierzeEnum.PTAKI.name().equals(tablicaPliku[0])) {
+                Ptaki ptaki = new Ptaki();
+                zwierzeta.add(ptaki.convertFromFile(rowInFile));
             }
         }
 

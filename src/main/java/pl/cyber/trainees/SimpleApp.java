@@ -50,7 +50,7 @@ public class SimpleApp {
 //        System.out.println(kot.przedstawSie());
 
         //Obiekty obiekty = new Obiekty();
-       // obiekty.uruchom();
+        //obiekty.uruchom();
 
 
         BankomatProsty bankomatProsty = new BankomatProsty();
