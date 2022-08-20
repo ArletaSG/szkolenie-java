@@ -9,6 +9,7 @@ package pl.cyber.trainees; // oreślenie pakietu wramach projektu, gdzie
 //region miejsce na importy
 
 import pl.cyber.trainees.wyjasnienia.*;
+import pl.cyber.trainees.wyjasnienia.bankomat.BankomatService;
 import pl.cyber.trainees.wyjasnienia.zwierzeta.Kot;
 
 import java.io.IOException;
@@ -48,11 +49,14 @@ public class SimpleApp {
 //        Kot kot = new Kot("Felix", LocalDate.of(2020, 7, 2), 3.0, "MARIUSZ");
 //        System.out.println(kot.przedstawSie());
 
-        Obiekty obiekty = new Obiekty();
-        obiekty.uruchom();
+        //Obiekty obiekty = new Obiekty();
+        //obiekty.uruchom();
+        BankomatService service = new BankomatService();
+        //service.uruchomRozwiązanie1();
+        service.uruchomRozwiązanie2();
+
 
     }
-
 }
 
     /*
