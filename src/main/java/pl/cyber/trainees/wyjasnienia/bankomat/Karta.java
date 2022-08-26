@@ -16,6 +16,14 @@ public class Karta {
         return nrKarty;
     }
 
+    public Integer getPinKarty() {
+        return pinKarty;
+    }
+
+    public Integer getSaldo() {
+        return saldo;
+    }
+
     public void sprawdzNrPin(final Integer pinKarty) { //samo po alt+Enter
         if(!this.pinKarty.equals(pinKarty)) {
             throw new KartaException("Niepoprawny pin dla karty");
